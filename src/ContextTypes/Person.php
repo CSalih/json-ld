@@ -37,6 +37,8 @@ class Person extends Thing
         'parent' => Person::class,
         'telephone' => null,
         'workLocation' => Place::class,
+        'worksFor' => Organization::class,
+        'gender' => null,
     ];
 
     /**
