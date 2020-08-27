@@ -201,11 +201,14 @@ abstract class AbstractContext implements ContextTypeInterface
      */
     protected function getNestedContext($class, $attributes = null)
     {
-        // Must be an array
-        if (is_array($attributes) === false) return $attributes;
-
-        // Create nested context
-        $context = new $class($attributes);
+        if ($attributes instanceof Context) {
+            $context = $attributes;
+        } else if (is_array($attributes) === false) {
+            return $attributes;
+        } else {
+            // Create nested context
+            $context = new $class($attributes);
+        }
 
         // Return context attributes
         return $this->filterNestedContext($context->getProperties());
