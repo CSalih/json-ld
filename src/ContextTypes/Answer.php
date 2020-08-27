@@ -1,10 +1,8 @@
 <?php
 
 
-namespace Styleflasher\SemanticWebBundle\SemanticContext;
+namespace JsonLd\ContextTypes;
 
-
-use JsonLd\ContextTypes\Comment;
 
 class Answer extends Comment
 {
