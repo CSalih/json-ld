@@ -10,6 +10,7 @@ class ContactPoint extends AbstractContext
      * @var array
      */
     protected $structure = [
+        'areaServed' => null,
         'telephone' => null,
         'contactType' => null,
         'email' => null,
