@@ -24,4 +24,21 @@ class FAQPage extends WebPage
     {
         parent::__construct($attributes, array_merge($this->structure, $this->extendedStructure, $extendedStructure));
     }
+
+    /**
+     * Set the mainEntity
+     *
+     * @param array $items
+     * @return array
+     */
+    protected function setMainEntityAttribute($items)
+    {
+        if (is_array($items) === false) {
+            return $items;
+        }
+
+        return array_map(function ($item) {
+            return $this->getNestedContext(Place::class, $item);
+        }, $items);
+    }
 }

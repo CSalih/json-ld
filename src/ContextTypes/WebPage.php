@@ -15,6 +15,18 @@ class WebPage extends AbstractContext
     ];
 
     /**
+     * WebPage constructor.
+     * @param array $attributes
+     * @param array $extendedStructure
+     */
+    public function __construct(array $attributes, array $extendedStructure = [])
+    {
+        $this->structure = array_merge($this->structure, $extendedStructure);
+
+        parent::__construct($attributes);
+    }
+
+    /**
      * Set the canonical URL of the article page.
      *
      * @param string $url
