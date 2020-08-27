@@ -24,6 +24,8 @@ class LocalBusiness extends AbstractContext
         'priceRange' => null,
         'areaServed' => null,
         'hasMap' => null,
+        'contactPoint' => ContactPoint::class,
+        'faxNumber' => null,
     ];
 
     /**
