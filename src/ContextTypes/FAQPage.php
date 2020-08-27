@@ -11,7 +11,7 @@ class FAQPage extends WebPage
      * @var array
      */
     protected $extendedStructure = [
-        'mainEntity' => Question::class,
+        'mainEntity' => Thing::class,
     ];
 
     /**
