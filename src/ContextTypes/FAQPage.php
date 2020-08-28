@@ -38,7 +38,7 @@ class FAQPage extends WebPage
         }
 
         return array_map(function ($item) {
-            return $this->getNestedContext(Place::class, $item);
+            return $this->getNestedContext(Thing::class, $item);
         }, $items);
     }
 }
