@@ -49,18 +49,6 @@ class CreativeWork extends Thing
     }
 
     /**
-     * Set the article body attribute.
-     *
-     * @param string $txt
-     *
-     * @return array
-     */
-    protected function setTextAttribute($txt)
-    {
-        return $this->truncate($txt, 260);
-    }
-
-    /**
      * Set the authors
      *
      * @param array $items
