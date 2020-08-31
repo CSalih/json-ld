@@ -43,6 +43,10 @@ class Organization extends Thing
             return $items;
         }
 
+        if (is_array(reset($items)) === false) {
+            return $this->getNestedContext(ContactPoint::class, $items);
+        }
+
         return array_map(function ($item) {
             return $this->getNestedContext(ContactPoint::class, $item);
         }, $items);
@@ -59,6 +63,10 @@ class Organization extends Thing
     {
         if (is_array($items) === false) {
             return $items;
+        }
+
+        if (is_array(reset($items)) === false) {
+            return $this->getNestedContext(Place::class, $items);
         }
 
         return array_map(function ($item) {

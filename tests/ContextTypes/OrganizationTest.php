@@ -2,11 +2,12 @@
 
 namespace JsonLd\Test\ContextTypes;
 
+use JsonLd\ContextTypes\Organization;
 use JsonLd\Test\TestCase;
 
 class OrganizationTest extends TestCase
 {
-    protected $class = \JsonLd\ContextTypes\Organization::class;
+    protected $class = Organization::class;
 
     protected $attributes = [
         'name' => 'Said Organization',
@@ -24,6 +25,15 @@ class OrganizationTest extends TestCase
             'telephone' => '18009999999',
             'contactType' => 'customer service',
         ],
+        'hasPOS' => [
+            'address' => [
+                'streetAddress' => 'street',
+                'addressLocality' => 'locality',
+                'addressRegion' => 'region',
+                'addressCountry' => 'country',
+                'postalCode' => 'postal code',
+            ]
+        ]
     ];
 
     /**

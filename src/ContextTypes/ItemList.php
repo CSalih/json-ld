@@ -39,6 +39,10 @@ class ItemList extends Thing
             return $items;
         }
 
+        if (is_array(reset($items)) === false) {
+            return $this->getNestedContext(Thing::class, $items);
+        }
+
         return array_map(function ($item) {
             return $this->getNestedContext(Thing::class, $item);
         }, $items);
