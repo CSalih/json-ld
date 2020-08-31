@@ -6,7 +6,6 @@ namespace JsonLd\ContextTypes;
 
 /**
  * Class MonetaryAmount
- * @package Styleflasher\AnnotationBundle\JsonLd\ContextTypes
  */
 class MonetaryAmount extends StructuredValue
 {

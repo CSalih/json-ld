@@ -1,11 +1,8 @@
 <?php
 
 
-namespace Styleflasher\SemanticWebBundle\SemanticContext;
+namespace JsonLd\ContextTypes;
 
-
-use JsonLd\ContextTypes\Place;
-use JsonLd\ContextTypes\Thing;
 
 class ItemList extends Thing
 {

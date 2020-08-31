@@ -6,7 +6,6 @@ namespace JsonLd\ContextTypes;
 
 /**
  * Class JobPosting
- * @package Styleflasher\AnnotationBundle\JsonLd\ContextTypes
  */
 class JobPosting extends Intangible
 {
